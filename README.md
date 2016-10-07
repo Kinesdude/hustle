@@ -6,12 +6,6 @@ Hustle is a bash script used to quickly search recursively in a directory and pl
 
 hustle [OPTIONS] [SEARCHWORD]
 
-### Options
-
--t n 		filters out files that were created more than n days ago
--d [dir] 	specify the directory to search for files recursively(standard directory is path2dir)
-
-
 ### Example 1 
 
 `hustle mat`
