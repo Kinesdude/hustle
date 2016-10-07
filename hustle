@@ -1,0 +1,66 @@
+#!/bin/bash
+#TODO create function to add to args(cleaner code)
+#TODO Comment the code
+#TODO filter out files that are not movie files, atm also plays other files, which doesn't matter much.
+#TODO add more arguments options.
+#TODO make so vlc doesn't open if no files were found
+
+path2dir="$HOME/torrent/"
+movieplayer="vlc -f"
+
+declare -a clargs=("$@")
+declare -a args
+args[0]=$path2dir
+
+if [ "$#" == "0" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ] ; then
+
+	echo "		-------------------- HUSTLE -------------------"
+	echo "Hustle is a bash script used to quickly search recursively in a directory and play the movie files that were found given the arguments to the script."
+	echo
+	echo "SETUP: Put the script somewhere in \$PATH. Change the script file to executable(for instance: chmod 755 hustle). Change the variable path2dir to the directory path used to store movie files and" 
+	echo "change the variable movieplayer to the desired program to play movie files."
+	echo
+	echo "SYNOPSIS: hustle [OPTIONS] [SEARCHWORD]"
+	echo
+	echo "Example1: hustle mat"	   
+	echo "will play the movie Matrix.(1999).720.YIFY..."
+	echo "if such a file exists in the directory specified by path2dir."
+	echo
+	echo "Example2: hustle -d /media/harddrive/movies/ -t 3 rob*1*9"
+	echo "will play the movie Mr.Robot.S01E09.HDTV... if such a file exists in /media/harddrive/movies/"
+	echo "and was created less than 3 days ago."
+	echo
+	echo "OPTIONS"
+	echo
+	echo "-t n 		filters out files that were created more than n days ago"
+	echo "-d [dir] 	specify the directory to search for files recursively(standard directory is path2dir)"
+	echo 
+	echo 
+	echo "@uthor Lunkentuss, email: peter__hansson@hotmail.com"
+	echo "		-------------------- HUSTLE -------------------"
+
+else
+	for((i = 0 ; i < $# - 1 ; i++)) ; do
+		case "${clargs[i]}" in
+			"-d")
+				i=$((i+1))
+				args[0]="${clargs[i]}"
+				;;
+			"-t")
+				i=$((i+1))
+				args[${#args[@]}]="-ctime"
+				args[${#args[@]}]="-${clargs[i]}"
+				;;
+		esac
+	done
+
+	args[${#args[@]}]="-iname"
+	args[${#args[@]}]="*${clargs[i]}*"
+	args[${#args[@]}]="-print0"
+
+
+	#echo "${args[@]}"		#Debugging
+	#echo "${clargs[@]}"	#Debugging	
+	find ${args[@]} | xargs -0 $movieplayer
+fi
+
