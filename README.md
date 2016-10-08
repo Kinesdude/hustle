@@ -1,6 +1,10 @@
-# Hustle
+# Hustle: play movie files with sp33d
 
-Hustle is a bash script used to quickly search recursively in a directory and play movie files. 
+Hustle is a bash script used to search recursively in a directory for movie files and play them.
+
+## Installation 
+
+Simply put the bash script somewhere in $PATH and make it executable. Set the variable "path2dir" to the directory where you store your movie files. If you uses another movie player program than vlc, change the variable "movieplayer" to the desired movie player. 
 
 ## Synopsis 
 
