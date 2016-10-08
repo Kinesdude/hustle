@@ -5,7 +5,7 @@
 #TODO add more arguments options.
 #TODO make so vlc doesn't open if no files were found
 
-path2dir="$HOME/torrent/"
+path2dir="/PATH/TO/MOVIE/FILES/"
 movieplayer="vlc -f"
 
 declare -a clargs=("$@")
