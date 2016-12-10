@@ -5,6 +5,7 @@
 #TODO add more arguments options.
 #TODO make so vlc doesn't open if no files were found
 #TODO add support for multiple directory paths
+#TODO fix a while loop instead of a for loop
 
 path2dir="/PATH/TO/MOVIE/FILES/"
 movieplayer="vlc -f"
