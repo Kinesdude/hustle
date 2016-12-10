@@ -62,6 +62,13 @@ else
 
 	#echo "${args[@]}"		#Debugging
 	#echo "${clargs[@]}"	#Debugging	
+
+	if [ -z "$(find ${args[@]})" ] ; then
+		echo "Error: No movies found"
+		echo "Use -h or --help for help instructions"
+		exit 1
+	fi
+
 	find ${args[@]} | xargs -0 $movieplayer
 fi
 
