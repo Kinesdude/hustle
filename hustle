@@ -3,7 +3,6 @@
 #TODO comment the code
 #TODO filter out files that are not movie files, atm also plays other files, which doesn't matter much.
 #TODO add more arguments options.
-#TODO make so vlc doesn't open if no files were found
 #TODO add support for multiple directory paths
 #TODO fix a while loop instead of a for loop
 
