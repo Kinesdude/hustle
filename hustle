@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#TODO make the program more abstract, arbitary directory and program (eg open pdf files)
+#TODO Correct error output if user writes wrong input arguments
 #TODO create function to add to args(cleaner code)
 #TODO comment the code
 #TODO filter out files that are not movie files, atm also plays other files, which doesn't matter much.
