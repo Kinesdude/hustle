@@ -60,6 +60,7 @@ else
 
 	args[${#args[@]}]="-iname"
 	args[${#args[@]}]="*${clargs[i]}*"
+	args[${#args[@]}]="-type f"
 	args[${#args[@]}]="-print0"
 
 
