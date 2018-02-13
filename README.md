@@ -8,7 +8,7 @@ Simply put the bash script somewhere in $PATH and make it executable. Set the va
 
 ## Synopsis 
 
-hustle [OPTIONS] [SEARCHWORD]
+hustle [OPTIONS] SEARCHWORD
 
 ### Example 1 
 

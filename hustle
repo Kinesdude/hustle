@@ -24,7 +24,7 @@ if [ "$#" == "0" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ] ; then
 	echo "SETUP: Put the script somewhere in \$PATH. Change the script file to executable(for instance: chmod 755 hustle). Change the variable path2dir to the directory path used to store movie files and" 
 	echo "change the variable movieplayer to the desired program to play movie files."
 	echo
-	echo "SYNOPSIS: hustle [OPTIONS] [SEARCHWORD]"
+	echo "SYNOPSIS: hustle [OPTIONS] SEARCHWORD"
 	echo
 	echo "Example1: hustle mat"	   
 	echo "will play the movie Matrix.(1999).720.YIFY..."
