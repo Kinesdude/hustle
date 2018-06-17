@@ -37,7 +37,7 @@ if [ "$#" == "0" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ] ; then
 	echo "OPTIONS"
 	echo
 	echo "-t n 		filters out files that were created more than n days ago"
-	echo "-d [dir] 	specify the directory to search for files recursively(standard directory is path2dir)"
+	echo "-d dir 	specify the directory to search for files recursively(standard directory is path2dir)"
 	echo 
 	echo 
 	echo "@uthor Lunkentuss, email: peter__hansson@hotmail.com"
